@@ -1,0 +1,1 @@
+This is a simple code example showing an issue with tab controls in CUITe.
