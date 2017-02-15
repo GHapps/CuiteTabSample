@@ -24,5 +24,10 @@ namespace CuiteTabSample
         {
             InitializeComponent();
         }
+
+        private void NotifyButton_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock.Visibility = Visibility.Visible;
+        }
     }
 }

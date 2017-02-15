@@ -31,12 +31,21 @@ namespace CodedUITabTests
 
             WpfWindow window = new WpfWindow(By.Name("MainWindow"));          
 
-            WpfTabList tabCollection = window.Find<WpfTabList>(By.Name("MainTabControl"));
+            WpfTabList tabCollection = window.Find<WpfTabList>(By.AutomationId("MainTabControl"));
             WpfTabPage tab = tabCollection.Find<WpfTabPage>(By.Name("General"));
 
             tab.Click();
+
+            //Is text box hidden:
+            WpfText textbox = tab.Find<WpfText>(By.AutomationId("5-1IoR3tekinspUsj8I_LQ"));
+            Assert.IsFalse(textbox.Visible);
+
             WpfButton notifyButton2 = tab.Find<WpfButton>(By.AutomationId("ZybHF6Q6IEe-4FJCaqgC6w"));
             notifyButton2.Click();
+
+            //SHould now show:
+            Assert.IsTrue(textbox.Visible);
+
         }
 
         #region Additional test attributes

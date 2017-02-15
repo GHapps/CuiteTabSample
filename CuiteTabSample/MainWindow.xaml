@@ -9,7 +9,11 @@
     <Grid>
         <TabControl Name="MainTabControl">
             <TabItem Header="General">
-                <Button Content="Notify" AutomationProperties.AutomationId="ZybHF6Q6IEe-4FJCaqgC6w" Name="NotifyButton" ContentStringFormat=""  VerticalAlignment="Top" HorizontalAlignment="Left" />
+                <StackPanel>
+                    <Button Content="Notify" AutomationProperties.AutomationId="ZybHF6Q6IEe-4FJCaqgC6w" Name="NotifyButton" ContentStringFormat=""  VerticalAlignment="Top" HorizontalAlignment="Left" Click="NotifyButton_Click" />
+                    <TextBlock x:Name="textBlock" Visibility="Hidden" TextWrapping="Wrap" Text="TextBlock" AutomationProperties.AutomationId="5-1IoR3tekinspUsj8I_LQ">What you sayin?</TextBlock>
+
+                </StackPanel>
             </TabItem>
             <TabItem Header="Security" />
             <TabItem Header="Details" />
